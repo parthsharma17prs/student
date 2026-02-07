@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --font-family: 'Inter', sans-serif;
+  
+  /* Light Theme */
+  --bg-primary: #f0f0f3;
+  --bg-secondary: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #666666;
+  --accent-primary: #333333; /* Dark button bg */
+  --accent-secondary: #fcd34d; /* Yellow highlight */
+  --accent-light: #e5e7eb; /* Light grey for stats bg */
+  --border-color: #e5e7eb;
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --sidebar-width: 250px;
+  
+  /* Specific UI Colors */
+  --card-bg: #ffffff;
+  --input-bg: #f3f4f6;
+  --button-text: #ffffff;
+  --hover-bg: #f9fafb;
+}
+
+[data-theme='dark'] {
+  /* Dark Theme */
+  --bg-primary: #111827;
+  --bg-secondary: #1f2937;
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --accent-primary: #ffffff; /* Light button bg in dark mode? Or keep dark with light text? Let's invert */
+  --accent-secondary: #fbbf24;
+  --accent-light: #374151;
+  --border-color: #374151;
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+  
+  --card-bg: #1f2937;
+  --input-bg: #374151;
+  --button-text: #000000;
+  --hover-bg: #374151;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+input {
+  font-family: inherit;
+  border: none;
+  outline: none;
+}
+
+/* Scrollbar styling for better look */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-secondary);
+  border-radius: 4px;
+  opacity: 0.5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-primary);
+}
